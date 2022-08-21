@@ -28,6 +28,6 @@ document.getElementById('calculator').addEventListener('click', function(event){
 document.getElementById('calculator').addEventListener('click', function(event){
   let btnEqual = event.target.innerText;
   if(btnEqual == '='){
-    console.log('Equal found', fromDisplay.innerText)
+    console.log(eval(fromDisplay.innerText));
   }
 })
