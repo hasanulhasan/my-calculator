@@ -1,17 +1,33 @@
-document.getElementById('1').addEventListener('click', function(){
-  console.log('one clicked');
-  const pram1 = 1;
-})
-document.getElementById('2').addEventListener('click', function(){
-  console.log('two clicked');
-  var pram2 = 2;
+let fromDisplay = document.getElementById('diplay');
+document.getElementById('calculator').addEventListener('click', function(event){
+  let btnValue = event.target.innerText;
+  let displayValue = document.getElementById('diplay');
+  if(isNaN(btnValue)){
+    if(btnValue == 'C'){
+      displayValue.innerText = '';
+    }
+  }
+  else{
+   const typeNewNumber =  btnValue + displayValue.innerText;
+   displayValue.innerText = typeNewNumber;
+  }
 })
 
-document.getElementById('plus').addEventListener('click', function(){
-  console.log('plus clicked');
-  var pram = 2;
+document.getElementById('calculator').addEventListener('click', function(event){
+  let btnPlus = event.target.innerText;
+  if(btnPlus == '+'){
+    let add1value = fromDisplay.innerText;
+    
+    let sum = add1value + add2value;
+  }
 })
 
-function add(pram1 , pram2){
-  return pram1 + pram2;
-}
+
+
+
+document.getElementById('calculator').addEventListener('click', function(event){
+  let btnEqual = event.target.innerText;
+  if(btnEqual == '='){
+    console.log('Equal found', fromDisplay.innerText)
+  }
+})
